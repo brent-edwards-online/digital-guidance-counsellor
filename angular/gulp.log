@@ -1,0 +1,43 @@
+[11:43:35] Using gulpfile ~\Dropbox\UoA Study\Study 2015\03 Full Stack Development\Course 03 -  Angular JS\Week - 04\Assignment\gulpfile.js
+[11:43:35] Starting 'clean'...
+[11:43:35] Finished 'clean' after 17 ms
+[11:43:35] Starting 'default'...
+[11:43:35] Starting 'jshint'...
+[11:43:35] Starting 'imagemin'...
+[11:43:35] Starting 'clean'...
+[11:43:35] Finished 'default' after 21 ms
+[11:43:35] Starting 'browser-sync'...
+[11:43:35] Finished 'browser-sync' after 46 ms
+[11:43:35] Starting 'watch'...
+[11:43:35] Finished 'watch' after 32 ms
+[11:43:35] Finished 'clean' after 86 ms
+[11:43:35] Starting 'copyfonts'...
+[11:43:35] Finished 'copyfonts' after 5.29 ms
+[11:43:35] Finished 'jshint' after 283 ms
+[11:43:35] Starting 'usemin'...
+[11:43:35] gulp-notify: [Gulp notification] Images task complete
+[11:43:38] gulp-notify: [Gulp notification] Images task complete
+[11:43:39] gulp-notify: [Gulp notification] Images task complete
+[11:43:39] gulp-notify: [Gulp notification] Images task complete
+[11:43:39] gulp-notify: [Gulp notification] Images task complete
+[11:43:39] gulp-notify: [Gulp notification] Images task complete
+[11:43:39] gulp-notify: [Gulp notification] Images task complete
+[11:43:39] Finished 'imagemin' after 3.85 s
+[11:43:39] Finished 'usemin' after 3.68 s
+[BS] Access URLs:
+ ---------------------------------------
+       Local: http://localhost:3001
+    External: http://169.254.246.28:3001
+ ---------------------------------------
+          UI: http://localhost:3002
+ UI External: http://169.254.246.28:3002
+ ---------------------------------------
+[BS] Serving files from: dist
+[BS] Watching files...
+[BS] File changed: dist\images\logo.png
+[BS] File changed: dist\images\buffet.png
+[BS] File changed: dist\images\alberto.png
+[BS] File changed: dist\images\vadonut.png
+[BS] File changed: dist\images\uthapizza.png
+[BS] File changed: dist\images\zucchipakoda.png
+[BS] File changed: dist\images\elaicheesecake.png

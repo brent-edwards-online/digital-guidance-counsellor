@@ -1,0 +1,96 @@
+<div class="container-fluid qg-site-width">
+    <div class="main-content">
+        <h1>How can we help you find work</h1>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+            <input id="searchBox" ng-model="query" ng-model-options="{ debounce: 200 }" ng-keydown="onKeyPress($event)" ng-change="doSearch()" type="text" class="form-control" name="searchBox" placeholder="What would you like to know?">
+        </div>
+        <div>
+            <ul class="media-list search-result-list">
+                <li ng-repeat="result in searchResults" ng-class="isActive($index)" > 
+                    <a ui-sref="app.quotedetail" ng-class="isActive($index)" >{{ result.text }}</a> 
+                </li>
+            </ul>  
+        </div>
+
+        <div style="padding-bottom: 10px">
+            <button type="button" ng-click="getJobCount()" class="btn btn-default">Search For Jobs</button>
+        </div>    
+        
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="thumbnail">
+                    <img src="images/seek.png" alt="Seek Job Search">
+                    <div class="caption">
+                        <h3>Seek Job Search</h3>
+                        <p>{{ jobStats.seekCount }}</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Seek</a> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="thumbnail">
+                    <img src="images/indeed.png" alt="Indeed Job Search">
+                    <div class="caption">
+                        <h3>Indeed Job Search</h3>
+                        <p>{{ jobStats.indeedCount }}</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Indeed</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="thumbnail">
+                    <img src="images/loganjobs.png" alt="Logan Job Search">
+                    <div class="caption">
+                        <h3>Logan Jobs Search</h3>
+                        <p>{{ jobStats.loganCount }}</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Logan Jobs</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group" style="padding-bottom: 10px">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+            <input id="searchBoxByPostCode" ng-model="queryByPostCode" ng-keydown="onKeyPressByPostCode($event)"  type="text" class="form-control" name="searchBox" placeholder="What would you like to know?">
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <div class="thumbnail">
+                    <!--
+                    <img src="images/seek.png" alt="Seek Job Search">
+                    -->
+                    <div class="caption">
+                        <h3>{{ jobStatsByPostCode.seek.service }} </h3>
+                        <p>{{ jobStatsByPostCode.seek.serviceCount }}</p>
+                        <p><a href="#" class="btn btn-primary" role="button">{{jobStatsByPostCode.seek.service}}</a> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="thumbnail">
+                    <!--
+                    <img src="images/indeed.png" alt="Indeed Job Search">
+                    -->
+                    <div class="caption">
+                        <h3>{{ jobStatsByPostCode.indeed.service }} </h3>
+                        <p>{{ jobStatsByPostCode.indeed.serviceCount }}</p>
+                        <p><a href="#" class="btn btn-primary" role="button">{{jobStatsByPostCode.indeed.service}}</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="thumbnail">
+                    <!--
+                    <img src="images/loganjobs.png" alt="Logan Job Search">
+                    -->
+                    <div class="caption">
+                        <h3>{{ jobStatsByPostCode.other.service }} </h3>
+                        <p>{{ jobStatsByPostCode.other.serviceCount }}</p>
+                        <p><a href="#" class="btn btn-primary" role="button">{{jobStatsByPostCode.other.service}}</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div>

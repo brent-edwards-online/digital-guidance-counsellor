@@ -1,0 +1,67 @@
+<div class="container-fluid qg-site-width">
+    <header id="qg-site-header">
+       
+        <!--#include virtual="/assets/includes-local/header/coat-of-arms.html"-->
+        
+        <div class="qg-coat-of-arms">
+            <a href="//www.qld.gov.au" tabindex="0">
+                <img src="/assets/v3/latest/images/coat-of-arms/qg-coa.svg" alt="Queensland Government" class="hidden-xs hidden-sm">
+                <img src="/assets/v3/latest/images/coat-of-arms/qg-coa-stacked.svg" alt="Queensland Government" class="hidden-md hidden-lg">
+            </a>
+        </div>
+    
+        <!--#include virtual="/assets/includes-local/header/site-utilities.html"-->
+        <ul class="qg-utilities list-inline">
+            
+                <!-- Optional shopping cart
+                <li>
+                    <a href="#"><span class="fa fa-shopping-cart fa-2x hidden-md hidden-lg" aria-hidden="true"></span>cart</a>
+                </li>
+                -->
+            
+                <li>
+                    <a href="https://www.qld.gov.au/contact-us/"><span class="fa fa-phone fa-2x hidden-md hidden-lg" aria-hidden="true"></span>Contact us</a>
+                </li>
+            
+                <li class="hidden-md hidden-lg">
+                    <button id="qg-show-search"
+                        data-toggle="collapse"
+                        data-target="#qg-search-form"><span class="fa fa-search fa-2x" aria-hidden="true"></span>search</button>
+                </li>
+                <li class="hidden-md hidden-lg">
+                    <button id="qg-show-menu"
+                        data-toggle="collapse"
+                        data-target="#qg-site-nav, #qg-breadcrumb"><span class="fa fa-bars fa-2x" aria-hidden="true"></span>menu</button>
+                </li>
+            </ul>
+    
+        <!--#include virtual="/assets/includes-local/header/site-search.html"-->
+        <form action="//find.search.qld.gov.au/s/search.html" id="qg-search-form" role="search" class="collapse">
+            <label for="qg-search-query" class="qg-visually-hidden">Search Queensland Government</label>
+            <div class="input-group">
+              <input type="text" name="query" id="qg-search-query" class="form-control" placeholder="Search website" tabindex="0" />
+              <span class="input-group-btn">
+                <button type="submit" id="feature-search-submit" class="btn btn-primary" title="Search site"><span class="fa fa-search" aria-hidden="true"></span><span class="qg-visually-hidden">search</span></button>
+              </span>
+            </div>
+            <!--parameters to display results on search page-->
+            <input type="hidden" name="num_ranks" value="10">
+            <input type="hidden" name="tiers" value="off">
+            <input type="hidden" name="collection" value="qld-gov">
+            <input type="hidden" name="profile" value="qld">
+        </form>
+    
+          
+        <!--#include virtual="/assets/includes-local/header/global-alert.html"-->
+    
+        <!--#include virtual="/assets/includes-local/header/site-nav.html"-->
+    
+    <nav id="qg-site-nav" role="navigation" aria-label="Main navigation" class="collapse">
+      <ul>
+        <li><a href="https://www.qld.gov.au/queenslanders/">For Queenslanders</a></li>
+        <li><a href="https://www.business.qld.gov.au/">Business and industry</a></li>
+      </ul>
+    </nav>
+    
+    </header>
+    </div>
