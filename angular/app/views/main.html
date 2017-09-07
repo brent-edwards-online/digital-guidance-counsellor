@@ -7,8 +7,8 @@
         </div>
         <div>
             <ul class="media-list search-result-list">
-                <li ng-repeat="result in searchResults" ng-class="isActive($index)" > 
-                    <a ui-sref="app.quotedetail" ng-class="isActive($index)" >{{ result.text }}</a> 
+                <li ng-repeat="result in searchResults" ng-class="isActive($index)" ng-click="doClickSearch(result.text)"> 
+                    <a href="#" ng-class="isActive($index)" >{{ result.text }}</a> 
                 </li>
             </ul>  
         </div>
@@ -26,7 +26,7 @@
                     <div class="caption">
                         <h3>Seek Job Search</h3>
                         <p>{{ jobStats.seekCount }}</p>
-                        <p><a href="#" class="btn btn-primary" role="button">Seek</a> </p>
+                        <p><a href="#" class="btn btn-primary" role="button" ng-click="gotoSeek()" >Seek</a> </p>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                     <div class="caption">
                         <h3>Indeed Job Search</h3>
                         <p>{{ jobStats.indeedCount }}</p>
-                        <p><a href="#" class="btn btn-primary" role="button">Indeed</a></p>
+                        <p><a href="#" class="btn btn-primary" role="button" ng-click="gotoIndeed()">Indeed</a></p>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                     <div class="caption">
                         <h3>Logan Jobs Search</h3>
                         <p>{{ jobStats.loganCount }}</p>
-                        <p><a href="#" class="btn btn-primary" role="button">Logan Jobs</a> </p>
+                        <p><a href="#" class="btn btn-primary" role="button" ng-click="gotoLogan()">Logan Jobs</a> </p>
                     </div>
                 </div>
             </div>

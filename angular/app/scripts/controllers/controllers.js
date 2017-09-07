@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('dgcApp')
-        .controller('MainController', ['$scope', 'searchFactory', 'jobSearchService', function($scope, searchFactory, jobSearchService) {
+        .controller('MainController', ['$scope', '$window', 'searchFactory', 'jobSearchService', function($scope, $window, searchFactory, jobSearchService) {
 
             $scope.searchResults = [];
             $scope.jobStats = {
@@ -33,6 +33,53 @@ angular.module('dgcApp')
                     return "";
                 }
             };
+
+            $scope.doClickSearch = function(s) {
+                console.log(s);
+                $scope.query = s;
+                $scope.getJobCount();
+            };
+
+            $scope.gotoSeek = function() {
+                console.log('gotoSeek');
+                var fields = $scope.query.split (" in ");
+                console.log(fields);
+                var jobType = fields[0];
+                var jobLocation = fields[1];
+                var jobQuery = jobType.split(" ").join('-') + '-jobs/';
+                var locationQuery = 'in-' + jobLocation.split(" ").join('-');
+
+                var url = 'https://www.seek.com.au/' + jobQuery + locationQuery;
+                $window.open(url, '_blank');
+            }
+
+            $scope.gotoIndeed = function() {
+                console.log('gotoIndeed');
+                var fields = $scope.query.split (" in ");
+                console.log(fields);
+                var jobType = fields[0];
+                var jobLocation = fields[1];
+                var jobQuery = jobType.split(" ").join('-') + '-jobs/';
+                var locationQuery = 'in-' + jobLocation.split(" ").join('-');
+
+                var url = 'https://au.indeed.com/jobs?q=' + encodeURIComponent(jobType) + '&l=' + encodeURIComponent(jobLocation);
+                $window.open(url, '_blank');
+            }
+
+            $scope.gotoLogan = function() {
+                console.log('gotoSeek');
+                var fields = $scope.query.split (" in ");
+                console.log(fields);
+                var jobType = fields[0];
+                var jobLocation = fields[1];
+                var jobQuery = jobType.split(" ").join('-') + '-jobs/';
+                var locationQuery = 'in-' + jobLocation.split(" ").join('-');
+
+                var url = 'http://www.loganjobs.com.au/search-results?keywords=' + encodeURIComponent(jobType) + '&suburb=' + encodeURIComponent(jobLocation);
+    
+                $window.open(url, '_blank');
+            }
+
 
             $scope.onKeyPress = function(keyevent) {
                 switch(keyevent.key) {
