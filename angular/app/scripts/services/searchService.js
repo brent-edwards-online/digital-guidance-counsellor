@@ -45,6 +45,16 @@ angular.module('dgcApp')
 
             
             var questions = [
+                'Sales assistant in Jimboomba',
+                'Sales assistant in Browns Plains',
+                'Sales assistant in Logan Central',
+                'Sales assistant in Cornubia',
+                'Sales assistant in Finders Lake',
+                'Automotive Mechanic in Jimboomba',
+                'Automotive Mechanic in Browns Plains',
+                'Automotive Mechanic in Logan Central',
+                'Automotive Mechanic in Cornubia',
+                'Automotive Mechanic in Finders Lake',
                 'Show me jobs in Queensland',
                 'Show me jobs in Bulimba',
                 'Show me jobs that are hiring',
