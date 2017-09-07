@@ -34,7 +34,8 @@ angular.module('dgcApp')
                 }
             };
 
-            $scope.doClickSearch = function(s) {
+            $scope.doClickSearch = function(s,i) {
+                $scope.selectedIndex = i;
                 console.log(s);
                 $scope.query = s;
                 $scope.getJobCount();

@@ -7,7 +7,7 @@
         </div>
         <div>
             <ul class="media-list search-result-list">
-                <li ng-repeat="result in searchResults" ng-class="isActive($index)" ng-click="doClickSearch(result.text)"> 
+                <li ng-repeat="result in searchResults" ng-class="isActive($index)" ng-click="doClickSearch(result.text, $index)"> 
                     <a href="#" ng-class="isActive($index)" >{{ result.text }}</a> 
                 </li>
             </ul>  
